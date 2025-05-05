@@ -167,31 +167,31 @@
         <form action="https://formsubmit.co/mattcb.rj@gmail.com" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" required>
-          
+
             <label for="telefone">Telefone:</label>
             <input type="text" name="telefone" required>
-          
+
             <label for="email">Email:</label>
             <input type="email" name="email" required>
-          
+
             <label for="mensagem">Mensagem:</label>
             <textarea name="mensagem" required></textarea>
-          
+
             <!-- Evita SPAM -->
             <input type="hidden" name="_captcha" value="false">
-          
+
             <!-- Redireciona após o envio -->
             <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-          
+
             <button type="submit">Enviar</button>
-          </form>
-          
-        
+        </form>
+
+
     </div>
 
     <section id="aboutme"></section>
 
-    <!--Scripts-->
+    <!--Scripts importados-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -202,14 +202,16 @@
     <script src="../js/indx-anim.js"></script>
     <script src="../js/cartinha.js"></script>
     <script src="../js/nav.js"></script>
-
+    <script src="../js/cursor.js"></script>
+ 
+    <!--Script geral na página-->
     <script>
         document.getElementById('arrow-down').addEventListener('click', function () {
             const target = document.getElementById('icategorias');
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const startPosition = window.pageYOffset;
             const distance = targetPosition - startPosition;
-            const duration = 1200; // em milissegundos (quanto maior, mais devagar)
+            const duration = 50; // em milissegundos (quanto maior, mais devagar)
             let start = null;
 
             function step(timestamp) {
@@ -288,7 +290,7 @@
         });
 
     </script>
-    <script src="../js/cursor.js"></script>
+
 
 
 </body>

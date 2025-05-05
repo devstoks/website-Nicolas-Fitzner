@@ -8,7 +8,7 @@
     background: rgba(0, 0, 0, 0.897);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
   }
   
   #popup-imagem img {
@@ -36,7 +36,7 @@
     font-size: 40px;
     color: white;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 10100;
   }
   #botao-fechar:hover {
     color: rgb(97, 99, 100);

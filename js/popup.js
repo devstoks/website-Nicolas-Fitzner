@@ -3,6 +3,7 @@ const imagens = document.querySelectorAll('.imagem-clicavel');
 const popup = document.getElementById('popup-imagem');
 const imagemGrande = document.getElementById('imagem-grande');
 const botaoFechar = document.getElementById('fechar-popup');
+const rostoInferior = document.getElementById('icone-container');
 
 let isZoomed = false;
 let isDragging = false;

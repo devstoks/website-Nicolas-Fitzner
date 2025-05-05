@@ -27,8 +27,8 @@
   background: url('../source/Sobre-mim/cabeca2.png') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  z-index: 2100000;
-  display: flex;
+  z-index: 1000;
+  display: block;
   justify-content: center;
   align-items: center;
   /* Garantir que o ícone esteja visível desde o início */
