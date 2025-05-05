@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Heavitas';
+    src: url('../fonts/butler/Butler/Butler_Bold.otf') format('opentype');
+}
+
+#link-nav {
+    font-family: 'Heavitas', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    transform: translateX(20%);
+    margin-right: auto; /* Faz o título ir para o canto esquerdo */
+}
+
+#link-nav {
+    font-family: 'Heavitas', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.726);
+    color: white;
+}
+
+
+nav.scrolled {
+    background-color: rgba(169, 169, 169, 0.9); /* Cinza subindo */
+}
+
+nav.transparent {
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+nav.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#inicio {
+    transition: background-color 0.3s ease;
+}
+
+#inicio.cinza {
+    background-color: rgba(169, 169, 169, 1); /* Cor cinza */
+}
+
+#inicio.preto {
+    background-color: rgba(0, 0, 0, 0.664); /* Cor preta */
+}

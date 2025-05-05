@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/bebas_neue/BebasNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'lemon milk';
+    src: url('../fonts/lemon_milk/LEMONMILK-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Moderniz';
+    src: url('../fonts/Moderniz.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }

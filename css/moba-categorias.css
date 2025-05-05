@@ -1,0 +1,44 @@
+/* Estilos para o modo mobile */
+@media (max-width: 768px) {
+    /* Remove a exibição das cartas no desktop */
+    .cartas-container {
+        display: none; /* Não exibe as cartas no desktop */
+    }
+
+    /* Estiliza as cartas no carrossel */
+    .carousel-inner .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Faz o carrossel ocupar toda a altura da tela */
+    }
+
+    .card {
+        width: 80%; /* Ajuste do tamanho da carta */
+        height: 60%; /* Ajuste do tamanho da carta */
+        margin: auto; /* Centraliza as cartas */
+        font-size: 1rem; /* Ajuste do tamanho da fonte */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0); /* Cor de fundo */
+        color: white; /* Cor do texto */
+        border-radius: 10px; /* Bordas arredondadas */
+    }
+
+    .card img {
+        max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do card */
+        border-radius: 10px;
+    }
+
+    /* Remove as rotações da carta */
+    .carta-1, .carta-2, .carta-3 {
+        transform: none; /* Garantindo que as cartas não fiquem tortas */
+    }
+}
+
+/* Ajuste para as setas de navegação */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}

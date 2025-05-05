@@ -1,0 +1,45 @@
+#popup-imagem {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.897);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #popup-imagem img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 100px 100px 100px rgb(0, 0, 0);
+  }
+  
+
+    .imagem-clicavel {
+        background-size: contain; /* Isso fará com que a imagem se ajuste dentro da div sem distorcer */
+        background-repeat: no-repeat; /* Não repetir a imagem */
+        background-position: center center; /* Centraliza a imagem dentro da div */
+        cursor: pointer;
+    }
+  
+
+  /* Botão para fechar popup */
+  #botao-fechar {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  #botao-fechar:hover {
+    color: rgb(97, 99, 100);
+  }
+  
+  

@@ -1,0 +1,211 @@
+/* Estilo geral para o corpo */
+body {
+    padding-top: 70px; /* Ajuste o valor se necessário */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    height: 2000px;
+}
+
+/* Container das cartas */
+.cartas-container {
+    position: fixed;
+    bottom: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    perspective: 1000px;
+    z-index: 10;
+    border: 2px solid rgba(255, 166, 0, 0);
+    animation: rollIn 1.4s ease-out forwards, fadeIn 2.3s ease-out forwards; /* Aplica a animação à container das cartas */
+}
+
+/* Animação de Fade In Cartas*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Começa invisível */
+    }
+    100% {
+        opacity: 1; /* Torna-se visível */
+    }
+}
+
+/* Animação de Roll In */
+@keyframes rollIn {
+    0% {
+        transform: translateX(-50%) translateY(100%); /* Começa fora da tela */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0); /* Vai para a posição final */
+    }
+}
+
+/* Cartas */
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.5s ease, width 0.3s, height 0.3s, background-color 0.3s;
+    position: relative;
+    background-size: cover; /* Faz a imagem cobrir todo o card */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+    cursor: pointer; /* Cursor muda para mãozinha (indicado para itens clicáveis) */
+}
+
+/* Cartas específicas */
+.carta-1 {
+    z-index: 1;
+    background-image: url('../source/Categorias/personal.png'); /* Substitua pelo caminho da sua imagem */
+}
+
+.carta-2 {
+    z-index: 2;
+    background-image: url('../source/Categorias/work.png'); /* Substitua pelo caminho da sua imagem */
+}
+
+.carta-3 {
+    z-index: 1;
+    background-image: url('../source/Categorias/credits.png'); /* Substitua pelo caminho da sua imagem */
+}
+
+/* Hover para as cartas */
+.carta-1:hover {
+    transform: translateY(-50px) !important;
+    width: 200px;
+    height: 300px;
+    z-index: 10;
+}
+
+.carta-2:hover {
+    transform: translateY(-50px) !important;
+    width: 200px;
+    height: 300px;
+    z-index: 10;
+}
+
+.carta-3:hover {
+    transform: translateY(-50px) !important;  
+    width: 200px;
+    height: 300px;
+    z-index: 10;
+}
+
+/* Animações de pulsar */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Título */
+h2 {
+    color: white;
+    animation: pulsar 2s infinite, fadeIn 2.8s ease-out forwards; /* Define a animação para 2 segundos e loop infinito */
+    font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+#escolha {
+    width: 100%; /* Certifica-se de que o h2 não exceda os limites */
+}
+
+.fit-container {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    left: 52%;
+    top: 60%;
+    transform: translate(-50%, -50%); /* Agora centraliza no eixo X e Y */
+    display: flex;
+    gap: 10px;
+    perspective: 1000px;
+    z-index: 10;
+    border: 5px solid rgba(255, 255, 255, 0);
+    justify-content: center; /* Garante que o conteúdo interno fique centralizado */
+    align-items: center; /* Alinha verticalmente */
+}
+
+#fit {
+    background-image: url('../source/Categorias/cartinhas.png'); /* Imagem inicial */
+    z-index: 10;
+    width: 200px;
+    height: 120%;
+    transform: scale(2.1);
+    transition: transform 0.5s ease, width 0.3s, height 0.3s, background-color 0.3s;
+
+    /* Animação de troca de imagem já começa, mas a visibilidade é controlada por outro efeito */
+    animation: trocarImg 6s infinite steps(1), fadeInFit 1.8s ease-out forwards 2s, salto 1s ease forwards 1.9s;
+    animation-fill-mode: both;
+    
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(255, 255, 255, 0);
+    opacity: 0; /* Começa invisível */
+}
+
+
+
+@keyframes salto {
+    0% {
+        transform: scale(2.1) translateY(0); /* Começa na posição original */
+    }
+    50% {
+        transform: scale(2.1) translateY(-10px); /* Pula para cima (subindo 10px) */
+    }
+    100% {
+        transform: scale(2.1) translateY(0); /* Retorna à posição original */
+    }
+}
+
+/* Animação de fade-in para o fit */
+@keyframes fadeInFit {
+    0% {
+        opacity: 0; /* Começa invisível */
+    }
+    100% {
+        opacity: 1; /* Fica totalmente visível no final */
+    }
+}
+
+/* Troca das imagens */
+@keyframes trocarImg {
+    0% {
+        background-image: url('../source/Categorias/cartinhas.png'); /* Imagem inicial */
+    }
+    30% { 
+        background-image: url('../source/Categorias/cartinhas_2.png'); /* Troca para a imagem alternativa */
+    }
+    35% { 
+        background-image: url('../source/Categorias/cartinhas.png'); /* Troca para a imagem alternativa */
+    }
+    40% { 
+        background-image: url('../source/Categorias/cartinhas_2.png'); /* Volta para a imagem inicial */
+    }
+    50% { 
+        background-image: url('../source/Categorias/cartinhas_2.png'); /* Troca novamente */
+    }
+    55% { 
+        background-image: url('../source/Categorias/cartinhas.png'); /* Mantém a imagem inicial no fim do ciclo */
+    }
+}
